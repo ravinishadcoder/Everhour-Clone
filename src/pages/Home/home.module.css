@@ -1,0 +1,78 @@
+.topHeading{
+    width: 50%;
+    margin: auto;
+}
+.subTitle{
+    font-size: 22px;
+    color: #767676;
+    font-weight: 400;
+    line-height: 1.36;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+.asana{
+    color: #4a90e2;
+    text-decoration: underline;
+   
+}
+.perfect{
+    margin-left: 70px;
+}
+.buttonSub{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+    
+}
+.usage{
+    
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    
+}
+.useImg{
+    
+    height: 300px;
+    width: 400px;
+    border: box;
+    background-image: url('https://blog-cdn.everhour.com/assets/images/new-design/background-elements/dotted/dimond-dotted-orange.png');
+}
+.useBox img{
+width: 24px;
+height: 24px;
+}
+.useBox{
+    padding: 10px;
+    background-color: white;
+    row-gap: 20px;
+}
+.subUsage{
+    font-size: 14px;
+    text-align: -webkit-left;
+    width: 300px;
+    background-color: #f0faf5;
+    box-shadow: #f0faf5 0px 2px 8px 0px;
+   padding: 10px 20px 10px 2px;
+}
+.subUsageText{
+    margin-left: 33px;
+}
+.hideDot{
+    
+    height: 200px;
+    width: 200px;
+    background-color: white;
+    position: absolute;
+    margin-top: 262px;
+}
+.estimate{
+    font-size: 36px;
+    font-weight: 500;
+    width: 40%;
+    margin: auto;
+    color: #333;
+    
+}
