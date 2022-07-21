@@ -1,10 +1,5 @@
 import styles from "./home.module.css";
-import billing from "../../assests/billing.png";
-import expenses from "../../assests/expenses.png";
-import file from "../../assests/file.png";
-import invoice from "../../assests/invoicing.png";
-import visual from "../../assests/visual.png";
-import timetrack from "../../assests/timetrack.png";
+
 import ambry from "../../assests/Ambry.png";
 import box from "../../assests/box.png";
 import foundation from "../../assests/foundation.png";
@@ -27,6 +22,7 @@ import {
 import { useState } from "react";
 import UseCase from "./UseCase";
 import Carousel from "./Carousel";
+import Articles from "./Articles";
 
 const Home = () => {
   return (
@@ -97,6 +93,9 @@ const Home = () => {
         </Box>
         <Box mt={'100px'}>
             <Carousel/>
+        </Box>
+        <Box>
+          <Articles/>
         </Box>
       </Box>
     </div>
