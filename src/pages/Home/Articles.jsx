@@ -46,7 +46,7 @@ const Articles = () => {
         {data.map((item, i) => {
           if (i == 4) {
             return (
-              <GridItem className={styles.fourth}>
+              <GridItem key={i} className={styles.fourth}>
                 <Text>{item.text}</Text>
                 <Text>{item.Auther}</Text>
               </GridItem>
@@ -54,14 +54,14 @@ const Articles = () => {
           }
           if (i == 5) {
             return (
-              <GridItem className={styles.fifth}>
+              <GridItem key={i} className={styles.fifth}>
                 <Text>{item.text}</Text>
                 <Text>{item.Auther}</Text>
               </GridItem>
             );
           } else {
             return (
-              <GridItem>
+              <GridItem key={i}>
                 <Text>{item.text}</Text>
                 <Text>{item.Auther}</Text>
               </GridItem>

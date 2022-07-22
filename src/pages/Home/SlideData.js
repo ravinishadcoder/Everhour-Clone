@@ -1,5 +1,5 @@
 export const SlideData = [
-    {
+    { 
       image:
         "https://blog-cdn.everhour.com/assets/images/new-design/screens/integrations/github-primary.webp"
     },

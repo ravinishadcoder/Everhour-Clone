@@ -5,6 +5,10 @@ import { AiFillTwitterCircle ,AiFillYoutube} from "react-icons/ai";
 import { FaFacebook,FaLinkedinIn } from "react-icons/fa";
 const Footer = () => {
   return (
+    <Box>
+        <Flex mr={'50px'} justifyContent={'end'}>
+            <img src="https://blog-cdn.everhour.com/assets/images/new-design/illustrations/primary-illustrations/footer.jpg" alt="" />
+        </Flex>
     <Box className={styles.mainFooter}>
         <Grid templateColumns={'repeat(9,1fr)'} className={styles.subFooter}>
             <GridItem></GridItem>
@@ -106,6 +110,8 @@ const Footer = () => {
          </HStack>
          </Box>
         </Flex>
+       
+    </Box>
     </Box>
   )
 }
