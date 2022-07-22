@@ -1,5 +1,5 @@
 import styles from "./home.module.css";
-
+import vidBtn from '../../assests/videobtn.png'
 import ambry from "../../assests/Ambry.png";
 import box from "../../assests/box.png";
 import foundation from "../../assests/foundation.png";
@@ -8,6 +8,7 @@ import next from "../../assests/next.png";
 import play from "../../assests/play.png";
 import pub from "../../assests/public.png";
 import React from "react";
+import { MdOutlineClear, MdStayCurrentLandscape } from "react-icons/md";
 import {
   Box,
   Button,
@@ -23,8 +24,17 @@ import { useState } from "react";
 import UseCase from "./UseCase";
 import Carousel from "./Carousel";
 import Articles from "./Articles";
+import { useRef } from "react";
 
 const Home = () => {
+  const ref = useRef()
+  const videoclick=()=>{
+   ref.current.style.display="block"
+    
+  }
+  const handleClearVid=()=>{
+    ref.current.style.display="none"
+  }
   return (
     <div>
       <Box>
@@ -68,6 +78,15 @@ const Home = () => {
             Book a demo
           </Button>
         </Flex>
+        <Box className={styles.videobtn} onClick={videoclick}>
+          <img src={vidBtn} width='45px' height='45px'/>
+          
+        </Box>
+        <Box className={styles.videoBox} ref={ref}>
+          <Text className={styles.clearVid} onClick={handleClearVid} ><MdOutlineClear/></Text>
+        <iframe width="1100px" height="550px" src="https://www.youtube.com/embed/t_GtwjdkvJM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        </Box>
         <Box display="flex" justifyContent="center" mt="50px">
           <img
             src="https://blog-cdn.everhour.com/assets/images/new-design/illustrations/primary-illustrations/home-narrow-v2.webp"
@@ -97,6 +116,7 @@ const Home = () => {
         <Box>
           <Articles/>
         </Box>
+        
       </Box>
     </div>
   );

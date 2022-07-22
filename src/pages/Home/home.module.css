@@ -33,6 +33,25 @@
     display: flex;
     
 }
+.videobtn{
+    position: absolute;
+    margin-left: 47rem;
+    margin-top: 12rem;
+}
+.videoBox{
+    height: 35rem;
+    width: 70rem;
+    position: absolute;
+    margin-left: 15rem;
+    margin-top: 3rem;
+ /* background-color: #4a90e2; */
+    display: none;
+}
+.clearVid{
+    font-size: 24px;
+    display: flex;
+    justify-content: end;
+}
 .useImg{
     
     height: 300px;
