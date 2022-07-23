@@ -18,6 +18,16 @@
   border-radius: 5px;
   margin-top: 10px;
 }
+.googleBoxL>input{
+  border: 1px solid #767676;
+  width: 320px;
+  height: 45px;
+  align-items: center;
+  gap: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
 .registrationBox {
   margin: 2.5rem auto;
   width: auto;

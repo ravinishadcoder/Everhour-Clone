@@ -32,12 +32,14 @@ const SignUp = () => {
         </Flex>
         
         <Button
+        as={'a'}
         mt={'30px'}
             background={"#57bb71"}
             h='55px'
             width={"180px"}
             color="white"
             _hover={{ bg: "#57bb71" }}
+            href={'./loginDetails'}
             borderColor="#ccd0d5"
             fontSize={'1rem'}
             fontWeight='normal'
