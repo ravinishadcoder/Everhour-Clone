@@ -1,9 +1,21 @@
 import { Box, Button, Flex, Input, Stack, Text, VStack } from "@chakra-ui/react";
-import React from "react";
+import React, { useContext, useRef } from "react";
 import styles from "./signup.module.css";
 import { FcGoogle } from "react-icons/fc";
+import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
+  const {signUpData,handleLogin} = useContext(AuthContext)
+  const passref = useRef();
+const hadleLogin=()=>{
+  let password = passref.current.value;
+  let userName = signUpData.some((el)=>el.password===password)
+  // console.log(userName,password)
+  if(userName){
+    handleLogin()
+  }
+  
+}
   return (
     <Box>
       <Box className={styles.topHeading}>
@@ -32,16 +44,16 @@ const Login = () => {
             <Text fontSize={"1rem"}>Sign up Google</Text>
           </Flex>
           <Text>Or</Text>
-          <Flex className={styles.googleBox}>
-            <Text fontSize={"1rem"}>Work email...</Text>
+          <Flex className={styles.googleBoxL}>
+            <Input placeholder="Work email..." />
           </Flex>
-          <Flex className={styles.googleBox}>
-            <Text fontSize={"1rem"}>Passoword...</Text>
+          <Flex className={styles.googleBoxL}>
+            <Input placeholder='Passoword...'ref={passref} type='password'/>
           </Flex>
 
           <Box >
           <Button
-           
+           onClick={hadleLogin}
            background={"#57bb71"}
            h="55px"
            width={"180px"}
@@ -84,7 +96,7 @@ const Login = () => {
       </Stack>
       <Flex m='auto' mt={'30px'}
              width={'470px'}  gap={'10px'} >
-             <Input placeholder='Work email...' h={'48px'}/>
+             <Input type='text' placeholder='Work email...' h={'48px'}/>
              <Button
             background={"#57bb71"}
             h="50px"

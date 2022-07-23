@@ -30,10 +30,13 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from "@chakra-ui/icons";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext";
 
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
-
+  const { handleLogOut, isAuth } = useContext(AuthContext);
+ 
   return (
     <Box padding={"25px"}>
       <Flex
@@ -89,34 +92,46 @@ export default function WithSubnavigation() {
           direction={"row"}
           spacing={6}
         >
+          {isAuth ? (
+            <>
+               <Button
+                as={"a"}
+                fontSize={"1rem"}
+                fontWeight={500}
+                variant={"link"}
+                onClick={handleLogOut}
+              >
+                Logout
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
+                as={"a"}
+                fontSize={"1rem"}
+                fontWeight={500}
+                variant={"link"}
+                href={"/login"}
+              >
+                Login
+              </Button>
+            </>
+          )}
+
           <Button
             as={"a"}
-            fontSize={"1rem"}
-            fontWeight={500}
-            variant={"link"}
-            href={"/login"}
-          >
-            Login
-          </Button>
-
-          
-          <Button
-            as={'a'}
             display={{ base: "none", md: "inline-flex" }}
             fontSize={"sm"}
             fontWeight={600}
             color={"white"}
-           
             href={"/signup"}
             bg={"green.400"}
-           
             _hover={{
               bg: "green",
             }}
           >
-            Sign Up
+            {isAuth ? "My account" : "Sign up"}
           </Button>
-         
         </Stack>
       </Flex>
 
@@ -306,7 +321,7 @@ const NAV_ITEMS = [
   },
   {
     label: "Pricing",
-    href: "#",
+    href: "/pricing",
   },
   {
     label: "Demo",
