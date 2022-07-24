@@ -33,14 +33,14 @@ https://everhourclone.vercel.app/
 
 - **Landing page:-**
 
-![App Screenshot](https://miro.medium.com/max/1400/1*ioFBY5_gcgrTyNHmtaiAcA.gif)
+![App Screenshot](https://media.giphy.com/media/VOtZpBEImcbjXa6zhI/giphy.gif)
 
 This is the Landing page of my project. On this page, you can see the navbar section. Video section, click on the play button and the video will pop out on your screen. There is a carousel section where you can slide some samples of projects.
 
 
 - **Sign-Up page:-**
 
-![App Screenshot](https://miro.medium.com/max/1400/1*BU_U7KD3jamHrs7_AjtUFw.gif)
+![App Screenshot](https://media.giphy.com/media/bso8NeE9FnbJJtf4vh/giphy.gif)
 
 This is the sign-up page. On this page, I added some features like if the user already exists then a message will pop out at the bottom of the screen.
 
