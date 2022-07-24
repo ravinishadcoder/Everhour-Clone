@@ -4,6 +4,7 @@ import base from "../assests/base camp.png";
 import git from "../assests/github.png";
 import monday from "../assests/monday.png";
 import pivote from "../assests/pivotal.png";
+
 import {
   Box,
   Flex,
@@ -38,7 +39,7 @@ export default function WithSubnavigation() {
   const { handleLogOut, isAuth } = useContext(AuthContext);
  
   return (
-    <Box padding={"25px"}>
+    <Box padding={"25px"} >
       <Flex
         bg={useColorModeValue("white", "gray.800")}
         color={useColorModeValue("gray.600", "white")}
@@ -160,8 +161,9 @@ const DesktopNav = () => {
                 fontWeight={400}
                 color={linkColor}
                 _hover={{
-                  textDecoration: "none",
-                  color: linkHoverColor,
+                  textDecoration: "underLine",
+                
+                  color: "#767676",
                 }}
               >
                 {navItem.label}

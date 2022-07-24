@@ -8,8 +8,19 @@
   margin-top: 20px;
   font-size: 1.35rem;
 }
-.googleBox {
+.googleBox{
   border: 1px solid #767676;
+  width: 320px;
+  height: 45px;
+  align-items: center;
+  gap: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.googleBoxI{
+  border: none;
+ 
   width: 320px;
   height: 45px;
   align-items: center;

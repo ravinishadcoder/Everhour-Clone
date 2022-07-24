@@ -1,4 +1,4 @@
-import { Box, Button, Flex, HStack, Stack, Text, VStack } from '@chakra-ui/react'
+import { Box, Button, Flex, HStack, Input, Stack, Text, VStack } from '@chakra-ui/react'
 import React from 'react'
 import { FcGoogle} from "react-icons/fc";
 import styles from './signup.module.css'
@@ -26,9 +26,9 @@ const SignUp = () => {
             <Text fontSize={'1rem'}>Sign up Google</Text>
         </Flex>
         <Text>Or</Text>
-        <Flex className={styles.googleBox}>
+        <Flex className={styles.googleBoxI}>
            
-            <Text fontSize={'1rem'}>Work email...</Text>
+            <Input type='text' placeholder='Work email...' />
         </Flex>
         
         <Button
