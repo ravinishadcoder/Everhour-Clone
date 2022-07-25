@@ -33,8 +33,10 @@ import {
 } from "@chakra-ui/icons";
 import { useContext } from "react";
 import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 export default function WithSubnavigation() {
+  const navigate = useNavigate()
   const { isOpen, onToggle } = useDisclosure();
   const { handleLogOut, isAuth } = useContext(AuthContext);
  
@@ -71,7 +73,7 @@ export default function WithSubnavigation() {
             fontFamily={"heading"}
             color={useColorModeValue("gray.800", "white")}
           >
-            <HStack>
+            <HStack onClick={()=>navigate("/")} cursor='pointer'>
               <img
                 width="30px"
                 src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.trustradius.com%2Fproduct-logos%2Fdy%2Fzk%2FG5MXHRHW9UCZ-180x180.PNG&f=1&nofb=1"

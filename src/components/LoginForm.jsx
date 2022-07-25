@@ -26,16 +26,17 @@ export default function LoginForm() {
     const navigate = useNavigate()
     const [show, setShow] = useState(false)
     const [data,setData]=useState({name:"",mob:"",password:""})
-    const [form,setForm]=useState()
+    
   const handleClick = () => setShow(!show)
   const {signUpData,updateSignUpInfo} = useContext(AuthContext)
   const handleChange=(e)=>{
    const {name,value}=e.target;
+   
    setData({...data,[name]:value})
   } 
  const handleSignIn=(e)=>{
 e.preventDefault();
-setForm(data)
+
 let userName = signUpData.some((el)=>el.name===data.name)
 let userMob = signUpData.some((el)=>el.mob===data.mob)
 if(data.name==""||data.mob==""){
@@ -44,8 +45,8 @@ if(data.name==""||data.mob==""){
 else if(userName||userMob){
    toast({ description: 'user already exist' })
 }else{
-    console.log(form)
-    updateSignUpInfo(form)
+    
+    updateSignUpInfo(data)
     navigate('/login')
 }
  }

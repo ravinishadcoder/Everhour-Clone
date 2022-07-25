@@ -1,19 +1,23 @@
-import { Box, Button, Flex, Input, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Flex, Input, Stack, Text, useToast, VStack } from "@chakra-ui/react";
 import React, { useContext, useRef } from "react";
 import styles from "./signup.module.css";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
+  const toast = useToast()
   const {signUpData,handleLogin} = useContext(AuthContext)
   const passref = useRef();
 const hadleLogin=()=>{
   let password = passref.current.value;
-  let userName = signUpData.some((el)=>el.password===password)
-  // console.log(userName,password)
-  if(userName){
+  let userName = signUpData.some((el)=>el.password==password)
+   if(userName){
     handleLogin()
-  }
+   }
+    else{
+      toast({ description: 'Incorrect password' })
+    }
+  
   
 }
   return (
