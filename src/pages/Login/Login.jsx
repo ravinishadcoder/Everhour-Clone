@@ -10,8 +10,8 @@ const Login = () => {
   const passref = useRef();
 const hadleLogin=()=>{
   let password = passref.current.value;
-  let userName = signUpData.some((el)=>el.password==password)
-   if(userName){
+  let userPassord = signUpData.some((el)=>el.password==password)
+   if(userPassord){
     handleLogin()
    }
     else{
